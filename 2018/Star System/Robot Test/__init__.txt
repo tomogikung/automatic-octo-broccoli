@@ -1,0 +1,17 @@
+*** Settings ***
+Suite Setup       Go to Login Page
+Suite Teardown    Close Browser
+Library           Selenium2Library
+Library           String
+Library           Collections
+Library           OperatingSystem
+
+*** Variables ***
+${EmpID}          580490003
+${Browser}        chrome
+${LoginPage}      http://192.168.10.98/BBQIntra/login
+
+*** Keywords ***
+Go To Page
+    Open Browser    ${LoginPage}    ${Browser}
+    Maximize Browser Window
